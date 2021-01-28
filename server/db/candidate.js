@@ -1,24 +1,25 @@
 const Sequelize = require('sequelize');
 const db = require('./db');
 
-//Candiate Model
+//Candidate Model
 
-const Candiate = db.define('candidate', {
-  id: {
+const Candidate = db.define('candidate', {
+  candidate_id: {
+    type: Sequelize.INTEGER,
+    primaryKey:true,
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+    },
+  },
+  communication_score: {
     type: Sequelize.INTEGER,
     allowNull: false,
     validate: {
       notEmpty: true,
     },
   },
-  commScore: {
-    type: Sequelize.INTEGER,
-    allowNull: false,
-    validate: {
-      notEmpty: true,
-    },
-  },
-  codeScore: {
+  coding_score: {
     type: Sequelize.INTEGER,
     allowNull: false,
     validate: {
@@ -27,6 +28,13 @@ const Candiate = db.define('candidate', {
   },
   title: {
     type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+    },
+  },
+  company_id: {
+    type: Sequelize.INTEGER,
     allowNull: false,
     validate: {
       notEmpty: true,
@@ -42,4 +50,4 @@ const Candiate = db.define('candidate', {
   },
 });
 
-module.exports = Candiate;
+module.exports = Candidate;

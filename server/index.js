@@ -3,7 +3,7 @@ const path = require('path')
 const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const db = require('./db/db')
+const {db} = require('./db')
 const PORT = 8080
 
 

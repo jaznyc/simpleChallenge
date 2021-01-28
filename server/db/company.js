@@ -1,18 +1,19 @@
 const Sequelize = require('sequelize');
-const db = require('./db');
+const db = require('./db')
 
 //Company Model
 
 const Company = db.define('company', {
-  id: {
+  company_id: {
     type: Sequelize.INTEGER,
+    primaryKey:true,
     allowNull: false,
     validate: {
       notEmpty: true,
     },
   },
-  fractalIdx: {
-    type: Sequelize.INTEGER,
+  fractal_index: {
+    type: Sequelize.DECIMAL(10, 3),
     allowNull: false,
     validate: {
       notEmpty: true,
