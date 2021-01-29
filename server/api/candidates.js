@@ -11,6 +11,7 @@ router.get('/:candidateId', async (req, res, next) => {
   try {
     const candidateId = req.params.candidateId;
     if (cacheObj[candidateId]) {
+      console.log('used cache')
       res.json(cacheObj[candidateId]);
     } else {
       const singleCandidate = await findCandidate(candidateId);
@@ -26,6 +27,7 @@ router.get('/:candidateId', async (req, res, next) => {
         codePercentile: percentile.codePercentile,
       };
       cacheObj[candidateId] = retObj;
+      console.log(retObj)
       res.json(retObj);
     }
   } catch (err) {

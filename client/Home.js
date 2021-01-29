@@ -67,7 +67,7 @@ class Home extends Component {
                   )}{' '}
                 </div>
                 <div>
-                  {candidate.comPercentile ? (
+                  {candidate.comPercentile !== undefined ? (
                     <h3>
                       Your Communication Percentile Is:{' '}
                       {(candidate.comPercentile * 100).toFixed(2)}%
@@ -75,7 +75,7 @@ class Home extends Component {
                   ) : (
                     <div></div>
                   )}
-                  {candidate.comPercentile ? (
+                  {candidate.comPercentile !== undefined ? (
                     <div className="progress-div" style={{ width: 300 }}>
                       <div
                         style={{ width: `${candidate.comPercentile * 300}px` }}
@@ -85,7 +85,7 @@ class Home extends Component {
                   ) : (
                     <div></div>
                   )}
-                  {candidate.codePercentile ? (
+                  {candidate.codePercentile !== undefined ? (
                     <h3>
                       Your Coding Percentile Is:{' '}
                       {(candidate.codePercentile * 100).toFixed(2)}%
@@ -93,7 +93,7 @@ class Home extends Component {
                   ) : (
                     <div></div>
                   )}
-                  {candidate.codePercentile ? (
+                  {candidate.codePercentile !== undefined ? (
                     <div className="progress-div" style={{ width: 300 }}>
                       <div
                         style={{ width: `${candidate.codePercentile * 300}px` }}
