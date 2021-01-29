@@ -32,14 +32,8 @@ class Home extends Component {
   }
 
   render() {
-    const obj = this.state.candidate
-    const candidate = this.state.candidate.singleCandidate;
-    const percentile = this.state.candidate.percentile
-    console.log('obbj', obj)
-    if(candidate !== undefined){
-      console.log(candidate.title);
-      console.log(percentile.comPercentile * 100)
-    }
+    const candidate = this.state.candidate
+    console.log('obbj', candidate)
 
     return (
       <div>
@@ -54,24 +48,20 @@ class Home extends Component {
         <div className='formCont'>
         <div className='form'>
         <form onSubmit={this.handleSubmit}>
-
           <label htmlFor="id"> Enter Your Candidate Id Here: </label>
-
           <input name="id" type="text" onChange={this.handleChange} />
           <button>Submit</button>
         </form>
-
         </div>
         </div>
-
         <div className='scoresCont'>
         <div className='scores'>
-        <div> {candidate ?
+        <div> {candidate.title ?
         <h2>Compared to other {candidate.title}s:</h2>
         : <div></div>} </div>
          <div>
-          { percentile ? (<h3>Your Communication Percentile Is: {(percentile.comPercentile * 100).toFixed(2)}%</h3>) : <div></div>}
-          {percentile ? (<h3>Your Coding Percentile Is: {(percentile.codePercentile * 100).toFixed(2)}%</h3>) : <div></div>}
+          { candidate.comPercentile ? (<h3>Your Communication Percentile Is: {(candidate.comPercentile * 100).toFixed(2)}%</h3>) : <div></div>}
+          {candidate.codePercentile ? (<h3>Your Coding Percentile Is: {(candidate.codePercentile * 100).toFixed(2)}%</h3>) : <div></div>}
         </div>
         </div>
         </div>
