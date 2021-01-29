@@ -61,12 +61,19 @@ class Home extends Component {
         : <div></div>} </div>
          <div>
           { candidate.comPercentile ? (<h3>Your Communication Percentile Is: {(candidate.comPercentile * 100).toFixed(2)}%</h3>) : <div></div>}
+          {candidate.comPercentile ? (<div className="progress-div" style={{width: 300}}>
+           <div style={{width: `${candidate.comPercentile *300}px`}}className="progress"/>
+      </div>):<div></div>}
           {candidate.codePercentile ? (<h3>Your Coding Percentile Is: {(candidate.codePercentile * 100).toFixed(2)}%</h3>) : <div></div>}
+          {candidate.codePercentile ? (<div className="progress-div" style={{width: 300}}>
+           <div style={{width: `${candidate.codePercentile *300}px`}}className="progress"/>
+      </div>):<div></div>}
         </div>
         </div>
         </div>
         </div>
         </div>
+
       </div>
     );
   }
