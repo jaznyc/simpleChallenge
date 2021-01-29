@@ -7,6 +7,7 @@ module.exports = router;
 
 let cacheObj = {}
 
+//Route
 router.get('/:candidateId', async (req, res, next) => {
   try {
     const candidateId = req.params.candidateId
@@ -27,6 +28,7 @@ router.get('/:candidateId', async (req, res, next) => {
   }
 });
 
+//Helper Functions
 const findCandidate = async (id)=>{
   const singleCandidate = await Candidate.findOne({
     where: {
@@ -40,8 +42,6 @@ const findCandidate = async (id)=>{
   });
   return singleCandidate
 }
-
-
 
 const findSimilarCandidiates = async (candidateObj)=>{
   const candidates = await Candidate.findAll({

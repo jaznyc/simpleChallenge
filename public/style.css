@@ -46,6 +46,18 @@ body {
   padding: 5%;
   width: 50%;
 }
+.progress-div {
+  background-color: rgb(233, 233, 233);
+  border-radius: 0.5rem;
+}
+
+.progress {
+  background-color: rgb(62, 122, 235);
+  height: 10px;
+  border-radius: 1rem;
+  transition: 1s ease;
+  transition-delay: 0.5s;
+}
 
 button {
   width: 20%;
@@ -67,17 +79,4 @@ input {
   width: 100%;
   font-size: 14px;
   border-radius: 5px 5px;
-}
-
-.progress-div {
-  background-color: rgb(233, 233, 233);
-  border-radius: 0.5rem;
-}
-
-.progress {
-  background-color: rgb(62, 122, 235);
-  height: 10px;
-  border-radius: 1rem;
-  transition: 1s ease;
-  transition-delay: 0.5s;
 }

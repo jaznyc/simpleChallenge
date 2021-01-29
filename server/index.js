@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const {db} = require('./db')
 const PORT = 8080
-
+module.exports = app
 
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../public')));
