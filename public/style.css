@@ -22,6 +22,7 @@ body {
   flex-direction: row;
   color: whitesmoke;
   background-color: #00120b;
+  height: 25em;
   opacity: 0.8;
   border-radius: 5px 5px;
 }
