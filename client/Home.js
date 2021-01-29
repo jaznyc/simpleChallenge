@@ -43,19 +43,39 @@ class Home extends Component {
 
     return (
       <div>
+        <div className='headContainer'>
+        <div className='header'>
         <h1>What's My Coding Percentile ?</h1>
+        </div>
+        <div className='intro'>
         <h3>Enter your Candidate ID below to see how you rank compared to other engineers at similar companies with the same title.</h3>
+        </div>
+        <div className='formNScore'>
+        <div className='formCont'>
+        <div className='form'>
         <form onSubmit={this.handleSubmit}>
+
           <label htmlFor="id"> Enter Your Candidate Id Here: </label>
+
           <input name="id" type="text" onChange={this.handleChange} />
           <button>Submit</button>
         </form>
+
+        </div>
+        </div>
+
+        <div className='scoresCont'>
+        <div className='scores'>
         <div> {candidate ?
-        <h2>Title: {candidate.title}</h2>
+        <h2>Compared to other {candidate.title}s:</h2>
         : <div></div>} </div>
          <div>
-          { percentile ? (<h3>Your Communication Percentile: {(percentile.comPercentile * 100).toFixed(2)}%</h3>) : <div></div>}
-          {percentile ? (<h3>Your Coding Percentile: {(percentile.codePercentile * 100).toFixed(2)}%</h3>) : <div></div>}
+          { percentile ? (<h3>Your Communication Percentile Is: {(percentile.comPercentile * 100).toFixed(2)}%</h3>) : <div></div>}
+          {percentile ? (<h3>Your Coding Percentile Is: {(percentile.codePercentile * 100).toFixed(2)}%</h3>) : <div></div>}
+        </div>
+        </div>
+        </div>
+        </div>
         </div>
       </div>
     );
