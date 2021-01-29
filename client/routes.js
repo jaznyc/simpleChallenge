@@ -1,13 +1,11 @@
-import React, {Component} from 'react'
-import {Route} from 'react-router-dom'
-import Home from './Home'
+import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+import Home from './Home';
 
-class Routes extends Component{
-  render(){
-    return(
-        <Route path="/" component={Home} />
-    )
+class Routes extends Component {
+  render() {
+    return <Route path="/" component={Home} />;
   }
 }
 
-export default Routes
+export default Routes;

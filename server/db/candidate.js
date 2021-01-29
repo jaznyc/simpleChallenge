@@ -6,7 +6,7 @@ const db = require('./db');
 const Candidate = db.define('candidate', {
   candidate_id: {
     type: Sequelize.INTEGER,
-    primaryKey:true,
+    primaryKey: true,
     allowNull: false,
     validate: {
       notEmpty: true,

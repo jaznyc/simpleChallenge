@@ -1,12 +1,12 @@
 const Sequelize = require('sequelize');
-const db = require('./db')
+const db = require('./db');
 
 //Company Model
 
 const Company = db.define('company', {
   company_id: {
     type: Sequelize.INTEGER,
-    primaryKey:true,
+    primaryKey: true,
     allowNull: false,
     validate: {
       notEmpty: true,
