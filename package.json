@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha tests",
     "start": "node server",
-    "start-dev": "webpack -w & nodemon server"
+    "start-dev": "webpack -w & nodemon server",
+    "seed": "node script/seedCompanies.js && node script/seedCandidates.js"
   },
   "keywords": [],
   "author": "",

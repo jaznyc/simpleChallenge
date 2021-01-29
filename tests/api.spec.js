@@ -9,11 +9,11 @@ describe('candidate route', () => {
   beforeEach(async () => {
     await db.sync({force: true})
     await company.create({
-      company_id: 3,
+      company_id: 6,
       fractal_index: 0.956
     })
     await company.create({
-      company_id: 5,
+      company_id: 7,
       fractal_index: 0.978
     })
     await candidate.create({
@@ -21,28 +21,28 @@ describe('candidate route', () => {
       communication_score: 107890 ,
       coding_score: 89760,
       title: 'Engineer',
-      company_id: 3
+      company_id: 6
     })
     await candidate.create({
       candidate_id: 953,
       communication_score: 289705 ,
       coding_score: 189760,
       title: 'Engineer',
-      company_id: 5
+      company_id: 7
     })
     await candidate.create({
       candidate_id: 955,
       communication_score: 100500,
       coding_score: 100000,
       title: 'Senior Engineer',
-      company_id: 3
+      company_id: 6
     })
     await candidate.create({
       candidate_id: 957,
       communication_score: 200000 ,
       coding_score: 50000,
       title: 'Senior Engineer',
-      company_id: 5
+      company_id: 7
     })
   })
 
