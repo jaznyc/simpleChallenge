@@ -19,8 +19,7 @@ Simple Challenge is an app for benchmarking an engineer's coding and communicati
 # Backend Logic Flow
 
 1. User enters their Candidate Id
-2. Route checks cache
-   -If in cache send result back to frontend, else proceed to step 3
+2. Route checks cache {if in cache send result back to frontend, else proceed to step 3}
 3. Get candidate in database
 4. Find similar candidates based on title and company fractal index
 5. Compute percentiles
